@@ -16,14 +16,22 @@ container.addEventListener("click", (e) => {
   //    if(e.target.classList.contains("plus")){
   //      console.log("plus");
   //    }
-  if (!(e.target.innerText == "=" || e.target.innerText == "AC")) {
-    operation.textContent += e.target.textContent;
-  }
+
+
+  // if (!(e.target.innerText == "=" || e.target.innerText == "AC")) {
+  //   operation.textContent += e.target.textContent;
+  // }
+  if(e.target.className == "but run"){
+  operation.textContent += e.target.textContent;
+
+}
+
+
   if (
     e.target.innerText == "+" ||
     e.target.innerText == "-" ||
     e.target.innerText == "*" ||
-    e.target.innerText == "/"
+    e.target.innerText == "/"  
   ) {
     result.textContent += operation.textContent;
     operation.textContent = "";
